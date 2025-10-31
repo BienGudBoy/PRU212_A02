@@ -5,7 +5,7 @@ public class HUDManager : MonoBehaviour
 {
     public TMP_Text scoreText;
     public TMP_Text levelText;
-    public TMP_Text speedText;
+    public TMP_Text livesText;
     
     public void UpdateScore(float score)
     {
@@ -19,9 +19,9 @@ public class HUDManager : MonoBehaviour
             levelText.text = $"Level: {level}";
     }
 
-    public void UpdateSpeed(float speed)
+    public void UpdateLives(int lives)
     {
-        if (speedText != null)
-            speedText.text = $"Speed: {speed:0.0}";
+        if (livesText != null)
+            livesText.text = $"Lives: {lives}";
     }
 }

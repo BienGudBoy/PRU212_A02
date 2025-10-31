@@ -27,18 +27,9 @@ public class UIManager : MonoBehaviour
     
     void Update()
     {
-        // Update speed display
-        PlayerController player = FindObjectOfType<PlayerController>();
-        if (player != null && speedText != null)
-        {
-            speedText.text = "Speed: " + player.GetCurrentSpeed().ToString("F1");
-        }
-        
-        // Handle pause input
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            TogglePause();
-        }
+        // Update lives display
+        if (livesText != null)
+            livesText.text = "Lives: " + GameManager.Instance.playerLives.ToString();
     }
     
     public void UpdateScore(float score)

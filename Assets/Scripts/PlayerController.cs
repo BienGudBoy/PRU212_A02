@@ -57,11 +57,6 @@ public class PlayerController : MonoBehaviour
             CheckTricks();
             UpdatePowerUps();
         }
-        // Update HUD speed
-        if (GameManager.Instance != null && GameManager.Instance.hudManager != null)
-        {
-            GameManager.Instance.hudManager.UpdateSpeed(GetCurrentSpeed());
-        }
     }
     
     void UpdatePowerUps()

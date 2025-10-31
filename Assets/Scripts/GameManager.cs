@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
         {
             hudManager.UpdateLevel(currentLevel);
             hudManager.UpdateScore(currentScore);
+            hudManager.UpdateLives(playerLives);
         }
     }
     
@@ -140,6 +141,8 @@ if (uiManager != null)
     public void LoseLife()
     {
         playerLives--;
+        if (hudManager != null)
+            hudManager.UpdateLives(playerLives);
         if (uiManager != null)
             uiManager.UpdateLives(playerLives);
             
